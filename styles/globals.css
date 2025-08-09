@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color, #0a0a0a);
+  color: var(--text-color, #fff);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  animation: fadeInDown 0.7s ease-out forwards;
+}
+
+.btn {
+  background: linear-gradient(90deg, #ff0000, #660000);
+  border: none;
+  padding: 14px 28px;
+  margin: 10px;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 1);
+}
+
+.btn.blue {
+  background: linear-gradient(90deg, #0044ff, #001133);
+  box-shadow: 0 0 10px rgba(0, 100, 255, 0.7);
+}
+
+.btn.small {
+  font-size: 0.9em;
+  padding: 10px 20px;
+  background: #444;
+  box-shadow: none;
+}
+
+.settings {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 10px 15px;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  border: 1px solid rgba(255, 0, 0, 0.4);
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
